@@ -1,6 +1,22 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:recommended"
+    ":dependencyDashboard", 
+    ":semanticPrefixFixDepsChoreOthers", 
+    ":ignoreModulesAndTests",
+    ":approveMajorUpdates",
+    ":maintainLockFilesWeekly",
+    "group:monorepos", 
+    "group:recommended", 
+    "mergeConfidence:age-confidence-badges", 
+    "replacements:all", 
+    "workarounds:all",
+    "helpers:forgejoDigestChangelogs", 
+    "helpers:giteaDigestChangelogs", 
+    "helpers:githubDigestChangelogs", 
+    "helpers:gitlabDigestChangelogs",
+    ":separateMultipleMajorReleases",
+    "schedule:weekly",
+    ":prNotPending"
   ]
 }
