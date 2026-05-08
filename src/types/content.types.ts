@@ -12,9 +12,9 @@ export type IANATimeZone = Extract<keyof typeof zones, string>; // Narrow to str
  */
 export type Person = {
   /** First name of the person */
-  firstName: string;
+  firstName?: string;
   /** Last name of the person */
-  lastName: string;
+  lastName?: string;
   /** The name you want to display, allows variations like nicknames */
   name: string;
   /** Role or job title */
@@ -23,10 +23,6 @@ export type Person = {
   avatar: string;
   /** Email address */
   email: string;
-  /** IANA time zone location */
-  location: IANATimeZone;
-  /** Languages spoken */
-  languages?: string[];
 };
 
 /**
@@ -120,13 +116,6 @@ export interface About extends BasePageConfig {
     /** Whether to display the avatar */
     display: boolean;
   };
-  /** Calendar section configuration */
-  calendar: {
-    /** Whether to display the calendar */
-    display: boolean;
-    /** Link to the calendar */
-    link: string;
-  };
   /** Introduction section */
   intro: {
     /** Whether to display the introduction */
@@ -135,49 +124,6 @@ export interface About extends BasePageConfig {
     title: string;
     /** Description of the introduction section */
     description: React.ReactNode;
-  };
-  /** Work experience section */
-  work: {
-    /** Whether to display work experience */
-    display: boolean;
-    /** Title for the work experience section */
-    title: string;
-    /** List of work experiences */
-    experiences: Array<{
-      /** Company name */
-      company: string;
-      /** Timeframe of employment */
-      timeframe: string;
-      /** Role or job title */
-      role: string;
-      /** Achievements at the company */
-      achievements: React.ReactNode[];
-      /** Images related to the experience */
-      images?: Array<{
-        /** Image source path */
-        src: string;
-        /** Image alt text */
-        alt: string;
-        /** Image width ratio */
-        width: number;
-        /** Image height ratio */
-        height: number;
-      }>;
-    }>;
-  };
-  /** Studies/education section */
-  studies: {
-    /** Whether to display studies section */
-    display: boolean;
-    /** Title for the studies section */
-    title: string;
-    /** List of institutions attended */
-    institutions: Array<{
-      /** Institution name */
-      name: string;
-      /** Description of studies */
-      description: React.ReactNode;
-    }>;
   };
   /** Technical skills section */
   technical: {

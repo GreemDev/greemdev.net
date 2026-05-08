@@ -25,6 +25,7 @@ import {
   List,
   ListItem,
   Line,
+  BlockQuote,
 } from "@once-ui-system/core";
 
 type CustomLinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
@@ -186,6 +187,7 @@ const components = {
   ul: createList("ul") as any,
   li: createListItem as any,
   hr: createHR as any,
+  BlockQuote,
   Heading,
   Text,
   CodeBlock,

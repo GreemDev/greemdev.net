@@ -23,13 +23,25 @@ import {
 } from "react-icons/pi";
 
 import {
-  SiJavascript,
-  SiNextdotjs,
-  SiFigma,
-  SiSupabase,
+  SiDotnet,
+  SiKotlin
 } from "react-icons/si";
 
-import { FaDiscord, FaGithub, FaLinkedin, FaX, FaThreads, FaInstagram, FaXTwitter, FaFacebook, FaPinterest, FaWhatsapp, FaReddit, FaTelegram, } from "react-icons/fa6";
+import { 
+  FaDiscord, 
+  FaGithub, 
+  FaLinkedin, 
+  FaX, 
+  FaThreads, 
+  FaInstagram, 
+  FaXTwitter, 
+  FaFacebook, 
+  FaPinterest, 
+  FaWhatsapp, 
+  FaReddit, 
+  FaTelegram, 
+  FaBluesky 
+} from "react-icons/fa6";
 
 export const iconLibrary: Record<string, IconType> = {
   arrowUpRight: HiArrowUpRight,
@@ -51,13 +63,12 @@ export const iconLibrary: Record<string, IconType> = {
   x: FaX,
   twitter: FaXTwitter,
   threads: FaThreads,
+  bluesky: FaBluesky,
   arrowUpRightFromSquare: HiArrowTopRightOnSquare,
   document: HiOutlineDocument,
   rocket: HiOutlineRocketLaunch,
-  javascript: SiJavascript,
-  nextjs: SiNextdotjs,
-  supabase: SiSupabase,
-  figma: SiFigma,
+  dotnet: SiDotnet,
+  kotlin: SiKotlin,
   facebook: FaFacebook,
   pinterest: FaPinterest,
   whatsapp: FaWhatsapp,
